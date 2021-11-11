@@ -20,7 +20,7 @@ const api = {
  searchBox.addEventListener('keydown',function(event){
      if(event.keyCode === 13) {
          event.preventDefault();
-         fetch('http://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&units=metric&appid='+api.apiKey)
+         fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&units=metric&appid='+api.apiKey)
      .then(response => response.json())
      /*.then(data => console.log(data)) */
      .then(data => {
@@ -38,7 +38,7 @@ const api = {
      });
 
 function cButton() {
-        fetch('http://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&units=metric&appid='+api.apiKey)
+        fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&units=metric&appid='+api.apiKey)
         .then(response => response.json())
         /*.then(data => console.log(data)) */
         .then(data => {
@@ -53,7 +53,7 @@ function cButton() {
 }
 
 function fButton () {
-        fetch('http://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&units=imperial&appid='+api.apiKey)
+        fetch('https://api.openweathermap.org/data/2.5/weather?q='+searchBox.value+'&units=imperial&appid='+api.apiKey)
         .then(response => response.json())
         /*.then(data => console.log(data)) */
         .then(data => {
